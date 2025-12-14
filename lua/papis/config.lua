@@ -63,6 +63,7 @@
 ---@field cite_formats_fallback string
 ---@field always_use_plain boolean
 ---@field enable_keymaps boolean
+---@field leader "<leader>"|"<localleader>"
 ---@field enable_fs_watcher boolean
 ---@field data_tbl_schema SqliteSchemaDict[]
 ---@field db_path string
@@ -120,6 +121,7 @@ local default_config = {
   cite_formats_fallback = "plain",
   always_use_plain = false,
   enable_keymaps = false,
+  leader = "<leader>",
   enable_fs_watcher = true,
   data_tbl_schema = { -- only "text" and "luatable" are allowed
     id = { "integer", primary = true },

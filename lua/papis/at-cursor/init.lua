@@ -16,6 +16,7 @@ local auto_popup = config["at-cursor"].auto_popup
 local utils = require("papis.utils")
 local commands = require("papis.commands")
 local keymaps = require("papis.keymaps")
+local leader = config.leader
 local db = assert(require("papis.sqlite-wrapper"), "Failed to load papis.sqlite-wrapper")
 
 ---Tries to identify the ref under cursor
@@ -190,7 +191,7 @@ local module_subcommands = {
 local module_keymaps = {
   open_file = {
     mode = "n",
-    lhs = "<leader>pf",
+    lhs = leader .. "pf",
     rhs = function()
       vim.cmd("Papis at-cursor open-file")
     end,
@@ -198,7 +199,7 @@ local module_keymaps = {
   },
   edit_entry = {
     mode = "n",
-    lhs = "<leader>pe",
+    lhs = leader .. "pe",
     rhs = function()
       vim.cmd("Papis at-cursor edit")
     end,
@@ -206,7 +207,7 @@ local module_keymaps = {
   },
   open_note = {
     mode = "n",
-    lhs = "<leader>pn",
+    lhs = leader .. "pn",
     rhs = function()
       vim.cmd("Papis at-cursor open-note")
     end,
@@ -214,7 +215,7 @@ local module_keymaps = {
   },
   show_popup = {
     mode = "n",
-    lhs = "<leader>pi",
+    lhs = leader .. "pi",
     rhs = function()
       vim.cmd("Papis at-cursor show-popup")
     end,

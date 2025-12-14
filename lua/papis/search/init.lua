@@ -10,12 +10,13 @@ local config = require("papis.config")
 local provider = config.search.provider
 local commands = require("papis.commands")
 local keymaps = require("papis.keymaps")
+local leader = config.leader
 
 ---@type PapisKeymapTable
 local module_keymaps = {
   open_search_normal = {
     mode = "n",
-    lhs = "<leader>pp",
+    lhs = leader .. "pp",
     rhs = function()
       vim.cmd("Papis search")
     end,

@@ -9,6 +9,7 @@ local log = require("papis.log")
 local config = require("papis.config")
 local commands = require("papis.commands")
 local keymaps = require("papis.keymaps")
+local leader = config.leader
 
 local ask_config = config.ask or config["ask"]
 local provider = ask_config.provider
@@ -17,7 +18,7 @@ local provider = ask_config.provider
 local module_keymaps = {
   open_ask_normal = {
     mode = "n",
-    lhs = "<leader>pa",
+    lhs = leader .. "pa",
     rhs = function()
       vim.cmd("Papis ask")
     end,
