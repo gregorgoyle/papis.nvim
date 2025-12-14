@@ -349,6 +349,9 @@ cite_formats_fallback = "plain",
 -- Enable default keymaps.
 enable_keymaps = false,
 
+-- Choose between leader and local leader prefix
+leader = "<leader>", ---@type "<leader>" | "<localleader>"
+
 -- Whether to enable the file system event watcher. When disabled, the database
 -- is only updated on startup.
 enable_fs_watcher = true,
